@@ -1,0 +1,41 @@
+﻿<Window x:Class="MiniProjekatHCI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MiniProjekatHCI"
+        mc:Ignorable="d"
+        Title="Mini Projekat HCI" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="200" />
+        </Grid.ColumnDefinitions>
+        <ComboBox SelectedValuePath="Content" Grid.Row="1" Grid.Column="1" Name="cmbContent" SelectionChanged ="cmbContent_SelectionChanged">
+            <ComboBoxItem>Potrošačke Cene</ComboBoxItem>
+            <ComboBoxItem>Inflacija</ComboBoxItem>
+            <ComboBoxItem>Zarada</ComboBoxItem>
+        </ComboBox>
+        <ComboBox SelectedValuePath="Content"  Grid.Row="1" Grid.Column="2" Name="cmbInterval" SelectionChanged="cmbInt_SelectionChanged">
+            <ComboBoxItem>Interval 1</ComboBoxItem>
+            <ComboBoxItem>Interval 2</ComboBoxItem>
+            <ComboBoxItem>Interval 3</ComboBoxItem>
+        </ComboBox>
+        <ComboBox SelectedValuePath="Content" Grid.Row="1" Grid.Column="0" Name="cmbPrikaz" SelectionChanged ="cmbPrikaz_SelectionChanged">
+            <ComboBoxItem>Tabelarni Prikaz</ComboBoxItem>
+            <ComboBoxItem >Grafikon Prikaz</ComboBoxItem>
+            <ComboBoxItem>Linijksi Grafikon Prikaz</ComboBoxItem>
+        </ComboBox>
+        <Label Grid.Row="0" Grid.Column="1" Content="Odaberite sadržaj prikaza:"/>
+        <Label Name ="lab_int" Grid.Row="0" Grid.Column="2" Content="Odaberite interval:"/>
+        <Label Grid.Row="0" Grid.Column="0" Content="Odaberite vrstu prikaza:"/>
+        <Button Grid.Column="1" Grid.Row="2" MinWidth="80" Margin="3" Content="Potvrdi izbor" Click="Button_Click"/>
+    </Grid>
+</Window>
