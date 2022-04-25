@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MiniProjekatHCI.Podaci;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,20 +24,32 @@ namespace MiniProjekatHCI.Prikazi
         public LinijskiGrafikon()
         {
             InitializeComponent();
-            LoadLineChartData();
+            //this.DataContext = MainWindow.data_prozora;
+            IEnumerable<Value1> lista_vrednosti = MainWindow.data_prozora;
+
+            LoadColumnChartData1(lista_vrednosti);
         }
 
 
 
-        private void LoadLineChartData()
+        private void LoadColumnChartData1(IEnumerable<Value1> lista_vrednosti)
         {
-            ((LineSeries)mcChart.Series[0]).ItemsSource =
-                new KeyValuePair<DateTime, int>[]{
-            new KeyValuePair<DateTime, int>(DateTime.Now, 100),
-            new KeyValuePair<DateTime, int>(DateTime.Now.AddMonths(1), 130),
-            new KeyValuePair<DateTime, int>(DateTime.Now.AddMonths(2), 150),
-            new KeyValuePair<DateTime, int>(DateTime.Now.AddMonths(3), 125),
-            new KeyValuePair<DateTime, int>(DateTime.Now.AddMonths(4), 155) };
+            int i = 0;
+            int t = 0;
+            foreach (Value1 v in lista_vrednosti)
+            {
+                t++;
+            }
+            KeyValuePair<string, double>[] cp = new KeyValuePair<string, double>[t];
+            foreach (Value1 v in lista_vrednosti)
+            {
+                double x = Convert.ToDouble(v.value);
+                cp[i] = new KeyValuePair<string, double>(v.date, x);
+                i++;
+                if (i == 14) { break; }
+            }
+
+            ((LineSeries)mcChart.Series[0]).ItemsSource = cp;
         }
 
     }

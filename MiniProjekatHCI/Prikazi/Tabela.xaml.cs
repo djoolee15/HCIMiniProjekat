@@ -25,23 +25,8 @@ namespace MiniProjekatHCI.Prikazi
         public TabelarniPrikaz()
         {
             InitializeComponent();
-            this._viewModel = new ViewModel
-            {
-                Data = new List<MockData>()
-                {
-                    new MockData
-                    {
-                        Name = "dragan",
-                        isAwesome = true
-                    },
-                    new MockData
-                    {
-                        Name = "milan",
-                        isAwesome = true
-                    }
-                }
-            };
-            this.DataContext = this._viewModel;
+            this.DataContext = MainWindow.data_prozora;
+            datagridprikaz.ItemsSource = MainWindow.data_prozora;
         }
        
     }

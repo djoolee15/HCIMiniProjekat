@@ -23,3 +23,5 @@ C:\Users\djole\OneDrive\Desktop\hci projekat 1\MiniProjekatHCI\MiniProjekatHCI\o
 C:\Users\djole\OneDrive\Desktop\hci projekat 1\MiniProjekatHCI\MiniProjekatHCI\obj\Debug\Prikazi\Grafikon.baml
 C:\Users\djole\OneDrive\Desktop\hci projekat 1\MiniProjekatHCI\MiniProjekatHCI\obj\Debug\Prikazi\LinijskiGrafikon.baml
 C:\Users\djole\OneDrive\Desktop\hci projekat 1\MiniProjekatHCI\MiniProjekatHCI\obj\Debug\Prikazi\Tabela.baml
+C:\Users\djole\OneDrive\Desktop\hci projekat 1\MiniProjekatHCI\MiniProjekatHCI\bin\Debug\Newtonsoft.Json.dll
+C:\Users\djole\OneDrive\Desktop\hci projekat 1\MiniProjekatHCI\MiniProjekatHCI\bin\Debug\Newtonsoft.Json.xml

@@ -8,10 +8,21 @@
         Title="LinijskiGrafikon" Height="450" Width="800">
     <Grid>
         <DVC:Chart Canvas.Top="80" Canvas.Left="10" Name="mcChart" 
-           Width="400" Height="250"
-           Background="LightSteelBlue">
+                  Background="LightCyan">
+            <DVC:Chart.Axes>
+                <DVC:CategoryAxis  Orientation="X">
+                    <DVC:CategoryAxis.Title>
+                        Datumi
+                    </DVC:CategoryAxis.Title>
+                </DVC:CategoryAxis>
+                <DVC:CategoryAxis  Orientation="Y">
+                    <DVC:CategoryAxis.Title>
+                        Vrednosti
+                    </DVC:CategoryAxis.Title>
+                </DVC:CategoryAxis>
+            </DVC:Chart.Axes>
             <DVC:Chart.Series>
-                <DVC:LineSeries Title=" Monthly Count" 
+                <DVC:LineSeries Title="Novcana Vrednost" 
     		IndependentValueBinding="{Binding Path=Key}"
     		DependentValueBinding="{Binding Path=Value}">
                 </DVC:LineSeries>

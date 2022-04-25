@@ -8,7 +8,11 @@ namespace MiniProjekatHCI.Podaci
 {
     internal class ViewModel
     {
-        public IEnumerable<MockData> Data { get; set; }
+        public IEnumerable<Value1> Data { get; set; }
+
+       
+
+       
 
 
 

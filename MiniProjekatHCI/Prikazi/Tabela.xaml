@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="TabelarniPrikaz" Height="450" Width="800">
     <Grid>
-        <DataGrid ItemsSource="{Binding Data}">
+        <DataGrid Name ="datagridprikaz" >
         </DataGrid>
     </Grid>
 </Window>
